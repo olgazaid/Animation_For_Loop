@@ -1,0 +1,118 @@
+@import './sass-partials/reset';
+@import './sass-partials/base';
+@import './sass-partials/mixins';
+@import './sass-partials/functions'; 
+
+body{
+    @include flex-container(center,center,column);
+
+    .header{
+        margin-bottom: 30px;
+        margin-top: -100px;
+    }
+
+    $colors-list: #FF0000, #E2571E, #FFFF00, #00FF00, #96bf33, #0000FF, #4B0080, #8B00FF, #ffffff, darkblue;
+    $numbers: 1,2,3,4,5,6,7,8,9,10;
+   
+ 
+    .wrapper{
+        width: 1037px;
+        height: 100px;
+        border: 50px solid #FFA829;
+        background: lighten(#FFA829, 10%);
+
+
+
+    
+//  @for $i from 1 through 10 {
+//   .box#{$i} {
+//     // -webkit-animation-delay:(#{$i*0.1s}); 
+//     // animation-delay:(#{$i*0.1s}); 
+//     // transition-delay: $i * 250ms;
+//     animation: test 1s 2s 3 alternate backwards;
+//     background:darkblue;
+//   }
+// }
+
+@keyframes bounce {
+    from { top: 0; left: 0; }
+  to   { top: 100px; left: 100px; }
+}
+//     from {background-color: red;}
+//     to {background-color: yellow;}
+// }
+
+
+ .box{
+            display: inline-block;
+            background:#FF0000;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            // transition: transform 300ms cubic-bezier(0, 0.47, 0.32, 1.97);
+            
+            animation-name: bounce;
+            animation-duration: 400ms;
+//  animation-duration: 4s; /* or: Xms */
+//  animation-iteration-count: 10;
+//  animation-direction: alternate; /* or: normal */
+//  animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+//  animation-fill-mode: forwards; /* or: backwards, both, none */
+//  animation-delay: 2s; /* or: Xms */
+}
+            // animation-name: example;
+            // animation-duration: 4s;
+            /*pointer-events: none;*/
+// }
+
+// @for $i from 1 through 10 {
+//   .box div:nth-child(#{$i}) {
+//     // -webkit-animation-delay:(#{$i*0.1s}); 
+//     // animation-delay:(#{$i*0.1s}); 
+//     background:darkblue;
+//   }
+// }
+
+// @keyframes carousel {
+//   @keyframes infinite-spinning {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+  
+
+
+
+// @each $current-color in $colors-list {
+    // $i: index($colors-list, $current-color);
+    // .box#{$i} { 
+    // background: $current-color;
+    // transition-delay: $i * 250ms;
+    // }
+// }
+
+// @each $number in $numbers {
+// .box#{$number} {
+//     background: darkblue;
+// }
+
+// .box#{index($colors-list,#FFFF00 )} {
+//     background:#FFFF00
+// }
+
+// }
+
+        
+        
+        // &:hover .box {
+        //    transform:rotate(0.5turn) skewY(1.07rad);
+        //    transform: translate(200px, 150px) rotate(20deg);
+        // animation: test 1s 2s 3 alternate backwards;
+        // }
+
+    
+    }
+        
+}

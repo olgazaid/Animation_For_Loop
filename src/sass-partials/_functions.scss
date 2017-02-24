@@ -1,0 +1,14 @@
+//
+@function get-rand-rgb() {
+  $red: random(256)-1;
+  $green: random(256)-1;
+  $blue: random(256)-1;
+  @return rgb($red ,$green ,$blue);
+}
+@function get-rand-rgba(){
+  $red: random(256)-1;
+  $green: random(256)-1;
+  $blue: random(256)-1;
+  $alpha: random(70)/100;
+  @return rgba($red ,$green ,$blue,$alpha);
+}
